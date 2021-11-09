@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Registrar</title>
+  <title>Editar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="plugins/dropzone/min/dropzone.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -250,7 +254,7 @@
               
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="documento.html" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Generar Documento
@@ -287,7 +291,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registro Pacientes</h1>
+            <h1>Editar Informacion Pacientes</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -304,136 +308,78 @@
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-9">
+          <div class="col-12">
             <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Datos Generales</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
+            <div class="card">
+                <div class="card-header">
+                 
+                </div>
+                <!-- /.card-header -->
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nombres</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombres">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Apellidos</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellidos">
-                  </div>
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Carnet Identidad</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Carnet">
-                      </div>
-                      
-                    </div>
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Nombre y Apellidos</th>
+                      <th>Vacuna</th>
+                      <th>Establecimiento</th>
+                      <th>Dosis</th>
+                      <th>Departamento</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 4.0
+                      </td>
+                      <td>Win 95+</td>
+                      <td> 4</td>
+                      <td>X</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 5.0
+                      </td>
+                      <td>Win 95+</td>
+                      <td>5</td>
+                      <td>C</td>
+                    </tr>
+                    <tr>
+                      <td>Trident</td>
+                      <td>Internet
+                        Explorer 5.5
+                      </td>
+                      <td>Win 95+</td>
+                      <td>5.5</td>
+                      <td>A</td>
+                    </tr>
+                    
+                    
 
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label>Fecha Nacimiento:</label>
-                          <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                              <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label>Servicio Departamental Salud</label>
-                        <select class="form-control select2" style="width: 100%;">
-                          <option selected="selected">Cochabamba</option>
-                          <option>La Paz</option>
-                          <option>Santa Cruz</option>
-                          <option>Tarija</option>
-                          <option>Potosi</option>
-                          <option>Chuquisaca</option>
-                          <option>Oruro</option>
-                          <option>Beni</option>
-                          <option>Pando</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label for="municipio">Municipio</label>
-                        <input type="text" class="form-control" id="municipio" placeholder="Municipio">
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label for="estsalud">Establecimiento Salud</label>
-                        <input type="text" class="form-control" id="estsalud" placeholder="Establecimiento de Salud">
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label>Fecha Vacunacion:</label>
-                          <div class="input-group date" id="fechavacunacion" data-target-input="nearest">
-                              <input type="text" class="form-control datetimepicker-input" data-target="#fechavacunacion"/>
-                              <div class="input-group-append" data-target="#fechavacunacion" data-toggle="datetimepicker">
-                                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label for="dosis">Dosis</label>
-                        <select class="form-control" name="dosis" id="dosis">
-                          <option>Primera Dosis</option>
-                          <option>Segunda Dosis</option>
-                          <option>Tercera Dosis</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-4">
-                      
-                        <div class="form-group">
-                          <label for="proveedor">Proveedor</label>
-                          <select class="form-control" name="proveedor" id="proveedor">
-                            <option>SPUTNIK-V</option>
-                            <option>SHINOPARM</option>
-                            <option>JHONSSON</option>
-                            <option>OTROS</option>
-                          </select>
-                        </div>
-                      
-                    </div>
-                    <div class="col-4">
-                      <div class="form-group">
-                        <label for="">Proxima Fecha Vacunacion</label>
-                        <input type="text" class="form-control" name="proxvacuna" id="proxvacuna" placeholder="Proxima fecha de vacunacion">
-                        
-                      </div>
-                    </div>
-
-                  </div>
-                  
-                  
-                  
-                  
+                    <tr>
+                        <td>Mi Buscador</td>
+                        <td>Incos</td>
+                        <td>1.0</td>
+                        <td>1.0</td>
+                        <td>Sistemas</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                    </tfoot>
+                  </table>
                 </div>
                 <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Registrar</button>
-                  <button type="button" class="btn btn-primary">Cancelar</button>
-                </div>
-              </form>
-            </div>
+              </div>
+              <!-- /.card -->
+            
             <!-- /.card -->
 
             
@@ -487,6 +433,20 @@
 <script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
 <!-- dropzonejs -->
 <script src="plugins/dropzone/min/dropzone.min.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -638,6 +598,25 @@ $(function () {
       myDropzone.removeAllFiles(true)
     }
     // DropzoneJS Demo Code End
+  </script>
+
+  <!-- Page specific script -->
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
   </script>
 </body>
 </html>
