@@ -24,3 +24,8 @@ function registrarVacuna(){
         });
       
 }
+
+function actualizarRegistro(idreg){
+  
+
+}
