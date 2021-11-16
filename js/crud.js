@@ -1,5 +1,4 @@
 function registrarVacuna(){
-
     
         //obtener valores
         var nombres = $('#nombres').val();
@@ -25,7 +24,19 @@ function registrarVacuna(){
       
 }
 
-function actualizarRegistro(idreg){
-  
+function actualizarPaciente(idreg){
+  //alert('ingreso');
+  let idPaci = idreg;
+    $.post("actualizarPaciente.php",{idPaci:idPaci},function(result){
+    $("#contenidopacienteupdate").html(result);
+    $("#contenidopacienteupdate").show();
+  });
 
+
+}
+
+function ejecutarUpdate(paciente){
+  alert('update '+paciente);
+
+  
 }
