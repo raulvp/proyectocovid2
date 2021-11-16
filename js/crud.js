@@ -62,3 +62,13 @@ function ejecutarUpdate(paciente){
   });
   
 }
+
+function eliminarPaciente(idPac){
+  alert("ingreso");
+  var idPaciente4 = idPac;
+  $.post("deletePaciente.php",{idPaci:idPaciente4},function(result){
+    $("#actualizarTabla").html(result);
+    $("#actualizarTabla").show();
+  });
+
+}

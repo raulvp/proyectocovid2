@@ -43,6 +43,9 @@
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
   <script src="js/crud.js"></script>
+  
+
+  
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -357,7 +360,8 @@
                             <td>
                                 <div class="btn-group">
                                     <a href="#" class="btn btn-warning" data-toggle='modal' data-target='#update' onClick="actualizarPaciente(<?php echo $idPaciente;?>)"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</a>
+                                    <a href="#" data-toggle='modal' data-target='#delete' class="btn btn-danger" ><i class="fas fa-trash"></i> Eliminar</a>
+                                
                                 </div>
                             </td>    
                         </tr>
@@ -642,7 +646,7 @@ $(function () {
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('hola');">Actualizar</button>
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Actualizar</button>
                                 </div>
                             </div><!--fin actualizar-->
                             
@@ -652,5 +656,31 @@ $(function () {
                     </div><!--fin div contenedorModal-->
 
 
+                    <!--Modal para Eliminar-->
+
+                   
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Eliminar Registro</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            Esta seguro de eliminar ese registro?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="eliminarPaciente(<?php echo $idPaciente3;?>)">Eliminar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
 </body>
 </html>
