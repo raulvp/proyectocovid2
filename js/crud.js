@@ -36,7 +36,29 @@ function actualizarPaciente(idreg){
 }
 
 function ejecutarUpdate(paciente){
-  alert('update '+paciente);
+  //alert('update '+paciente);
+  
+  var idPaciente1 = paciente;
+  var nombres1 = $('#nombres1').val();
+  alert(nombres1);
+  var apellidos1 = $('#apellidos1').val();
+  var carnet1 = $('#carnet1').val();
+  var fechaNac1 = $('#fechaNac1').val();
+  var servicioSalud1 = $('#servicioSalud1').val();
+  var municipio1 = $('#municipio1').val();
+  var estsalud1 = $('#estsalud1').val();
+  var fechavacunacion1 = $('#fechavacunacion1').val();
+  var dosis1 = $('#dosis1').val();
+  var proveedor1 = $('#proveedor1').val();
+  var proxvacuna1 = $('#proxvacuna1').val();
 
+  $.post("ejecutarUpdatePaciente.php",{idPaci:idPaciente1,nombres:nombres1,apellidos:apellidos1,
+    carnet:carnet1,fechaNac:fechaNac1,servicioSalud:servicioSalud1,municipio:municipio1,
+    estsalud:estsalud1,fechavacunacion:fechavacunacion1,dosis:dosis1,proveedor:proveedor1,
+    proxvacuna:proxvacuna1},function(result){
+    $("#actualizarTabla").html(result);
+    $("#actualizarTabla").show();
+
+  });
   
 }

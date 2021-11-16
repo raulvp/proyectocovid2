@@ -326,6 +326,7 @@
                 
                 <!-- /.card-header -->
                 <div class="card-body">
+                <div id="actualizarTabla">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
@@ -364,31 +365,7 @@
                     }
                     ?>
                     
-                    <div id="contenedorModal">
-                      <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-                          <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                            <h4 class="modal-title" id="">Actualizar Registro Paciente</h4>  
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                
-                            </div>
-                            <div id="contenidopacienteupdate"> <!--contenido actualizar-->
-                                <div class="modal-body">
-                                <!--contenido para mostrar en actualizacion-->
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('hola');">Actualizar</button>
-                                </div>
-                            </div><!--fin actualizar-->
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div><!--fin div contenedorModal-->
-
+                    
                     </tbody>
                     <tfoot>
                     <tr>
@@ -401,8 +378,12 @@
                     </tr>
                     </tfoot>
                   </table>
+                
+                  </div>
+                <!-- /.actualizarTabla -->
                 </div>
                 <!-- /.card-body -->
+                
               </div>
               <!-- /.card -->
             
@@ -644,5 +625,32 @@ $(function () {
       });
     });
   </script>
+
+                  <div id="contenedorModal">
+                      <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                            <h4 class="modal-title" id="">Actualizar Registro Paciente</h4>  
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                
+                            </div>
+                            <div id="contenidopacienteupdate"> <!--contenido actualizar-->
+                                <div class="modal-body">
+                                <!--contenido para mostrar en actualizacion-->
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('hola');">Actualizar</button>
+                                </div>
+                            </div><!--fin actualizar-->
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div><!--fin div contenedorModal-->
+
+
 </body>
 </html>

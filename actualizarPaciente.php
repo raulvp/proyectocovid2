@@ -134,7 +134,7 @@
 </div>
 <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onClick="s(<?php echo $idPaciente1;?>)">Actualizar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="ejecutarUpdate(<?php echo $idPaciente1;?>)">Actualizar</button>
 </div>
 
 <?php
