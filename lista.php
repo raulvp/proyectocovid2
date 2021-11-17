@@ -241,16 +241,16 @@
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="registrar.html" class="nav-link">
+                <li class="nav-item">
+                    <a href="registrar.php" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Registrar</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/forms/advanced.html" class="nav-link">
+                    <a href="lista.php" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Editar</p>
+                      <p>Lista</p>
                     </a>
                   </li>
                   <li class="nav-item">
