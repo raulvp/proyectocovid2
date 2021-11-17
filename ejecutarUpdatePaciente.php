@@ -25,12 +25,7 @@
 
     $ejecutarupdate = mysqli_query($conex,$sqlupdate);
 
-    /*$sqlupdateex = "UPDATE paciente SET nombres='$nombres3' WHERE idPaciente = '$idPaciente3'";
-
-    $ejecutarupdateex = mysqli_query($conex,$sqlupdateex);
-*/
-    echo 'realizo cambios';
-    /*actualizar tabla*/
+    /*mostrar elementos actualizados de tabla*/
     $sqlmostrar3 = "select idPaciente,nombres,apellidos,serviciosSalud,proveedor,dosis from paciente";
     $consulta3 = mysqli_query($conex, $sqlmostrar3);
 

@@ -44,9 +44,6 @@
 
   <script src="js/crud.js"></script>
   
-
-  
-
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -359,8 +356,9 @@
                         ?>
                             <td>
                                 <div class="btn-group">
+                                  
                                     <a href="#" class="btn btn-warning" data-toggle='modal' data-target='#update' onClick="actualizarPaciente(<?php echo $idPaciente;?>)"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                    <a href="#" data-toggle='modal' data-target='#delete' class="btn btn-danger" ><i class="fas fa-trash"></i> Eliminar</a>
+                                    <a href="#" data-toggle='modal' data-target='#delete' class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</a>
                                 
                                 </div>
                             </td>    

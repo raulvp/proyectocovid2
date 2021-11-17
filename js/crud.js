@@ -40,7 +40,6 @@ function ejecutarUpdate(paciente){
   
   var idPaciente1 = paciente;
   var nombres1 = $('#nombres1').val();
-  alert(nombres1);
   var apellidos1 = $('#apellidos1').val();
   var carnet1 = $('#carnet1').val();
   var fechaNac1 = $('#fechaNac1').val();
@@ -64,7 +63,7 @@ function ejecutarUpdate(paciente){
 }
 
 function eliminarPaciente(idPac){
-  alert("ingreso");
+  
   var idPaciente4 = idPac;
   $.post("deletePaciente.php",{idPaci:idPaciente4},function(result){
     $("#actualizarTabla").html(result);

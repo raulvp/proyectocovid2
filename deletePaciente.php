@@ -1,12 +1,12 @@
 <?php
     include "accionesbd/conexionbd.php";
     conectarbd();
-    echo "delete";
+    
     $idPaciente3 = $_POST['idPaci'];
 
     /*********eliminar**/
 
-    $sqldelete = "delete from paciente where idPaciente=".$idPaciente."";
+    $sqldelete = "delete from paciente where idPaciente=".$idPaciente3."";
 
     $ejecutardelete = mysqli_query($conex,$sqldelete);
 
@@ -48,7 +48,8 @@
                             <td>
                                 <div class="btn-group">
                                     <a href="#" class="btn btn-warning" data-toggle='modal' data-target='#update' onClick="actualizarPaciente(<?php echo $idPaciente3;?>)"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                    <a href="#" data-toggle='modal' data-target='#delete' class="btn btn-danger" onClick="eliminarPaciente(<?php echo $idPaciente3;?>)"><i class="fas fa-trash"></i> Eliminar</a>
+                                    <a href="#" data-toggle='modal' data-target='#' class="btn btn-danger" onClick="eliminarPaciente(<?php echo $idPaciente3;?>)"><i class="fas fa-trash"></i> Eliminar</a>
+                                
                                 </div>
                             </td>    
                         </tr>
