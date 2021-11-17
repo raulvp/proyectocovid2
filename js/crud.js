@@ -1,5 +1,4 @@
 function registrarVacuna(){
-
     
         //obtener valores
         var nombres = $('#nombres').val();
@@ -25,9 +24,10 @@ function registrarVacuna(){
       
 }
 
-function actualizarReg(idPaciente){
-    let idPaci = idPaciente;
-    $.post("../actualizarPaciente.php",{idPaci:idPaci},function(result){
+function actualizarPaciente(idreg){
+  //alert('ingreso');
+  let idPaci = idreg;
+    $.post("actualizarPaciente.php",{idPaci:idPaci},function(result){
     $("#contenidopacienteupdate").html(result);
     $("#contenidopacienteupdate").show();
   });
@@ -35,16 +35,10 @@ function actualizarReg(idPaciente){
 
 }
 
-function ejecutarUpdate1(valor){
-  alert(valor);
-}
-
-
-function ejecutarUpdate(idPaciente5){
-  //alert("ingreso");
-  /*var idPaciente3 = idPaciente;
-//alert("ingreso");
-  //obtener valores
+function ejecutarUpdate(paciente){
+  //alert('update '+paciente);
+  
+  var idPaciente1 = paciente;
   var nombres1 = $('#nombres1').val();
   var apellidos1 = $('#apellidos1').val();
   var carnet1 = $('#carnet1').val();
@@ -56,19 +50,24 @@ function ejecutarUpdate(idPaciente5){
   var dosis1 = $('#dosis1').val();
   var proveedor1 = $('#proveedor1').val();
   var proxvacuna1 = $('#proxvacuna1').val();
-//alert(""+nombres);
-  $.post("accionesbd/ejecutarUpdatePaciente.php",{idPaci:idPaciente3,nombres:nombres1,apellidos:apellidos1,
+
+  $.post("ejecutarUpdatePaciente.php",{idPaci:idPaciente1,nombres:nombres1,apellidos:apellidos1,
     carnet:carnet1,fechaNac:fechaNac1,servicioSalud:servicioSalud1,municipio:municipio1,
     estsalud:estsalud1,fechavacunacion:fechavacunacion1,dosis:dosis1,proveedor:proveedor1,
     proxvacuna:proxvacuna1},function(result){
     $("#actualizarTabla").html(result);
     $("#actualizarTabla").show();
 
-  });*/
+  });
+  
+}
 
-  $.post("../ejecutarPrueba.php",{idPaci:idPaciente5},function(result){
+function eliminarPaciente(idPac){
+  
+  var idPaciente4 = idPac;
+  $.post("deletePaciente.php",{idPaci:idPaciente4},function(result){
     $("#actualizarTabla").html(result);
     $("#actualizarTabla").show();
-
   });
+
 }

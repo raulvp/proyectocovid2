@@ -1,31 +1,16 @@
 <?php
     include "accionesbd/conexionbd.php";
     conectarbd();
-
+    
     $idPaciente3 = $_POST['idPaci'];
 
-    $nombres3 = $_POST['nombres'];
-    $apellidos3 = $_POST['apellidos'];
-    $carnet3 = $_POST['carnet'];
-    $fechaNac3 = $_POST['fechaNac'];
-    $servicioSalud3 = $_POST['servicioSalud'];
-    $municipio3 = $_POST['municipio'];
-    $estsalud3 = $_POST['estsalud'];
-    $fechavacunacion3 = $_POST['fechavacunacion'];
-    $dosis3 = $_POST['dosis'];
-    $proveedor3 = $_POST['proveedor'];
-    $proxvacuna3 = $_POST['proxvacuna'];
+    /*********eliminar**/
 
-    /*********actualizar**/
+    $sqldelete = "delete from paciente where idPaciente=".$idPaciente3."";
 
-    $sqlupdate = "UPDATE paciente SET nombres='$nombres3',apellidos = '$apellidos3', 
-    cedula='$carnet3',fechaNac='$fechaNac3',serviciosSalud='$servicioSalud3', municipio='$municipio3',
-    establecimiento='$estsalud3',fechaVac='$fechavacunacion3',dosis = '$dosis3',
-    proveedor='$proveedor3',proxVac='$proxvacuna3' WHERE idPaciente = '$idPaciente3'";
+    $ejecutardelete = mysqli_query($conex,$sqldelete);
 
-    $ejecutarupdate = mysqli_query($conex,$sqlupdate);
-
-    /*mostrar elementos actualizados de tabla*/
+    /*actualizar tabla*/
     $sqlmostrar3 = "select idPaciente,nombres,apellidos,serviciosSalud,proveedor,dosis from paciente";
     $consulta3 = mysqli_query($conex, $sqlmostrar3);
 
@@ -63,7 +48,8 @@
                             <td>
                                 <div class="btn-group">
                                     <a href="#" class="btn btn-warning" data-toggle='modal' data-target='#update' onClick="actualizarPaciente(<?php echo $idPaciente3;?>)"><i class="fas fa-pencil-alt"></i> Editar</a>
-                                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i> Eliminar</a>
+                                    <a href="#" data-toggle='modal' data-target='#' class="btn btn-danger" onClick="eliminarPaciente(<?php echo $idPaciente3;?>)"><i class="fas fa-trash"></i> Eliminar</a>
+                                
                                 </div>
                             </td>    
                         </tr>
